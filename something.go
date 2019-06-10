@@ -541,7 +541,7 @@ type MyDownloadedData struct {
 func main() {
 	region := "UK12"
 	grid := "d2"
-	url := fmt.Sprintf("http://rasp.mrsap.org/cgi-bin/get_rasp_blipspot.cgi?region=UK12&grid=d2&day=0&i=1332&k=1547&width=2000&height=2000&linfo=1&param=CUpot&format=json", region, grid)
+	url := fmt.Sprintf("http://rasp.mrsap.org/cgi-bin/get_rasp_blipspot.cgi?region=%s&grid=%s&day=0&i=1332&k=1547&width=2000&height=2000&linfo=1&param=CUpot&format=json", region, grid)
 
 	//==========
 	req, err := http.NewRequest("GET", url, nil)
